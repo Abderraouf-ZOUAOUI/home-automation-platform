@@ -111,7 +111,7 @@ const getMqttTopicForComponent = (componentName: string): string => {
         return;
       }
   
-      const response = await axios.get("http://localhost:5000/api/rooms", {
+      const response = await axios.get("https://home-automation-platform-api.vercel.app//api/rooms", {
         headers: {
           Authorization: `Bearer ${token}`,
           email: userEmail  // Send email in header
