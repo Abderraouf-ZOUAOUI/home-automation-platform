@@ -17,9 +17,16 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
+app.use(cors(
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    }
+));
 
 mongoose
-  .connect('mongodb://localhost:27017/smartHome')
+  .connect('mongodb://home_automation:project_web_2025@cluster0-shard-00-00.nslsr.mongodb.net:27017,cluster0-shard-00-01.nslsr.mongodb.net:27017,cluster0-shard-00-02.nslsr.mongodb.net:27017/smartHome?ssl=true&replicaSet=atlas-it0wjd-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('Connected to MongoDB'))
   .catch((err) => console.error('MongoDB connection error:', err));
 
