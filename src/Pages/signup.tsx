@@ -29,7 +29,7 @@ function Signup() {
         }
     
         // Envoi des données au backend
-        axios.post("http://localhost:5000/register", {
+        axios.post("https://home-automation-platform-api.vercel.app/register", {
             firstName,
             lastName,
             phoneNumber: phone,
