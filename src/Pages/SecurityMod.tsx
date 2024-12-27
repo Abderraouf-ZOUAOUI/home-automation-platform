@@ -14,7 +14,7 @@ const SecurityMod: React.FC = () => {
   // Fonction pour récupérer l'état depuis le backend
   const fetchSecurityStatus = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/security");
+      const response = await axios.get("https://home-automation-platform-api.vercel.app/api/security");
       if (response.data && typeof response.data.isDoorLocked === "boolean") {
         setSyncedState(response.data.isDoorLocked);
         setLocalState(response.data.isDoorLocked); // Synchroniser l'état local avec le backend
