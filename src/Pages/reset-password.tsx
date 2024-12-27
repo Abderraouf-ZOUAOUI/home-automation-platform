@@ -50,7 +50,7 @@ const PasswordReset: React.FC = () => {
         
         setLoading(true);
         try {
-            await axios.post('http://localhost:5000/reset-password', {
+            await axios.post('https://home-automation-platform-api.vercel.app/reset-password', {
                 firstName: formData.firstName,
                 lastName: formData.lastName,
                 newPassword: formData.newPassword
