@@ -29,7 +29,7 @@ const PasswordReset: React.FC = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            await axios.post('http://localhost:5000/verify-name', {
+            await axios.post('https://home-automation-platform-api.vercel.app/verify-name', {
                 firstName: formData.firstName,
                 lastName: formData.lastName
             });
