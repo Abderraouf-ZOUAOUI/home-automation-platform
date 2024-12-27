@@ -1,0 +1,33 @@
+/* Styling pour NotificationBox */
+.notification-box {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  padding: 15px;
+  margin: 15px;
+  margin-left: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notification-box h3 {
+  color: #ff5252;
+  font-size: 18px;
+  margin: 0;
+}
+
+.notification-box p {
+  color: #555;
+  font-size: 16px;
+  margin: 0;
+}
+
+.notification-box .timestamp {
+  font-size: 14px;
+  color: #888;
+  text-align: right;
+}

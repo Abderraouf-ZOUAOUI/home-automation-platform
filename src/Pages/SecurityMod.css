@@ -1,0 +1,123 @@
+.security-container {
+  background: #023047;
+  background: linear-gradient(340deg, #023047 0%, #023047 50%, #023047 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    padding-top: 100px;
+    padding-right: 100px;
+    height: 100%;
+    
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .security-controls {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-left: 140px;
+    margin-right: -20px;
+    padding-top: 55px;
+    padding-left: 150px;
+    
+  }
+  
+  .control-item {
+    background: #129bf7;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .control-item p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  .security-info {
+    background-color: #129bf7;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width:160%;
+    margin: 15px auto;
+    margin-left: -150px;
+    margin-top: -25px;
+    line-height: 1.6;
+  }
+  
+  .security-info h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #82c6f3;
+  }
+  
+  .security-info p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  
+  .security-info ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .security-info li {
+    margin-bottom: 10px;
+  }
+  
+  .security-info li ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    font-size: 0.9rem;
+  }
+  
+  .security-info li ul li {
+    margin-bottom: 5px;
+  }
+  
+  .icon {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    border-radius: 50%;
+  }
+  
+  .icon.locked {
+    background-color: #4caf50;
+  }
+  
+  .icon.unlocked {
+    background-color: #ff5722;
+  }
+  
+  .icon.alarm-on {
+    background-color: #ffeb3b;
+  }
+  
+  .icon.alarm-off {
+    background-color: #b0bec5;
+  }
+  

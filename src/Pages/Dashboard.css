@@ -1,0 +1,517 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+     background: #023047;
+    background: linear-gradient(340deg, #023047 0%, #023047 50%, #023047 100%);
+    color: #ffffff;
+    padding: 0.4rem;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.weather__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    border: none;
+    background: #023047;
+    background: linear-gradient(340deg, #023047 0%, #023047 50%, #023047 100%);
+    outline: none;
+    color: #c8e9ff;
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+}
+
+input::placeholder {
+    color: #c8e9ff;
+}
+
+.weather__search {
+    position: relative;
+}
+
+.weather__search i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 15px;
+    color: #000000;
+}
+
+.weather__units {
+    font-size: 1rem;
+    background-color: #023047;
+}
+
+.weather__units span {
+    cursor: pointer;
+    background-color: #023047;
+}
+
+.weather__units span:first-child {
+    margin-right: 0.5rem;
+}
+
+.weather__body {
+    text-align: center;
+    margin-top: 0rem;
+}
+
+.weather__datetime {
+    margin-bottom: 0.2rem;
+    font-size: 14px;
+}
+
+.weather__forecast {
+  background: #023047;
+  background: linear-gradient(340deg, #023047 0%, #023047 50%, #023047 100%);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+}
+
+.weather__icon img {
+    width: 100px;
+}
+
+.weather__temperature {
+    font-size: 1.75rem;
+    margin-top: -20px;
+}
+
+.weather__minmax {
+    display: flex;
+    justify-content: center;
+}
+
+.weather__minmax p {
+    font-size: 14px;
+    margin: 0.5rem;
+}
+
+.weather__info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+    margin-top: 0rem;
+    width:70%;
+    margin-left: 11rem;
+
+}
+
+.weather__card {
+    display: flex;
+    align-items: center;
+    background: #129bf7;
+    padding: 5PX;
+    border-radius: 10px;
+    
+}
+
+.weather__card i {
+    
+    font-size: 10px;
+    margin-right: 1rem;
+    align-items: center;
+}
+
+.weather__card p {
+    font-size: 15px;
+}
+.temperature-icon::after {
+  content: "🌡";
+  font-size: 32px; /* Adjust size of the icon */
+  margin-left: 5px; /* Add some spacing between text and icon */
+}
+
+@media(max-width: 936px){
+    .container {
+        width: 90%;
+    }
+
+    .weather__header {
+        flex-direction: column;
+    }
+
+    .weather__units {
+        margin-top: 1rem;
+    }
+}
+
+
+@media(max-width: 200px){
+    .weather__info {
+        grid-template-columns: none;
+    }
+}
+
+
+
+
+/* Styling for the main control container */
+.controle {
+    background-color: #023047;
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width:100%;
+  }
+  
+  .toutbox {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+/* General Styling */
+.home-dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Welcome Section */
+  .Bienvenue {
+    background-color: #129bf7;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    text-align: left;
+    max-width: 6000px;
+    margin-bottom: 10px;
+    flex-shrink: 0;
+  }
+  
+  .welcome-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .text {
+    font-size: 0.9rem;
+    color: #ffffff;
+  }
+  
+  .more-info-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #82c6f3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  .add-room-button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #129bf7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width:10%;
+  }
+  .add-room-button:hover {
+    background-color: #0056b3;
+  }
+  .more-info-link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Content Layout */
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Spacing between boxes */
+    justify-content: flex-start; /* Align items to the left */
+  }
+  /* box de rooms*/
+  .box {
+    background-color: #023047;
+    padding: 20px;
+    border-radius: 10px;
+    width: calc(50% - 20px); /* Take half the width minus spacing */
+    flex-grow: 1; /* Allow the box to grow if needed */
+    min-width: 300px; /* Ensure boxes don’t shrink too much */
+    margin-bottom: 20px; /* Add spacing at the bottom */
+    color: white;
+    text-align: center;
+  }
+  
+  .title {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff9f9;
+    margin-right: 50px;
+    }
+  
+  .toutcomposant {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width:90%;
+  }
+  
+  
+  /* Individual Components */
+  .composant,
+  .composant2,
+  .composant3 {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 25px;
+    border: 1px solid #129bf7;
+    border-radius: 10px;
+    background-color: #129bf7;
+    width: 200px; /* Fixed width for components */
+    
+  }
+  
+  .device,
+  .device2 {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  .device {
+  font-size: 2rem;
+  color: #ffc107; /* Lightbulb color (yellowish) */
+}
+  
+  .device-status p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .composant {
+    position: relative;
+  }
+  
+  .device {
+    cursor: pointer;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #129bf7;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .popup-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .popup-content h4 {
+    margin-bottom: 20px;
+  }
+  
+  .popup-content button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #129bf7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-content button:hover {
+    background-color: #0056b3;
+  }
+  
+  .close-popup {
+    background-color: #129bf7;
+  }
+  
+  .close-popup:hover {
+    background-color: #129bf7;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .modal {
+    background: #129bf7;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal input {
+    width: 70%;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-add-button,
+  .modal-cancel-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    gap: 40px;
+  }
+  
+  .modal-add-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .modal-cancel-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  .button-group {
+    display: flex;
+    gap: 800px; /* Optional spacing between buttons */
+  }
+  
+  .add-room-button {
+    width: 100px;
+     /* Optional: Make buttons equal width */
+  }
+  
+ /******************************** streamin button *****************************************/ 
+
+ /* Overlay for popup */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup Window */
+.popup-window {
+  background: #00000064;
+  border-radius: 8px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.25);
+}
+
+/* Close Button */
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Start/End Streaming Buttons */
+.button-group {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  margin-right: 100%;
+}
+
+.start-button,
+.end-button {
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.start-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.end-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.start-button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+.end-button:disabled {
+  background-color: #9e9e9e;
+  cursor: not-allowed;
+}
+
+/* Streaming Button */
+.start-streaming-button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  background-color: #129bf7;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width:10%;
+}
+
+.start-streaming-button:hover {
+  background-color: #1976d2;
+}
+
+  
+  
+  
