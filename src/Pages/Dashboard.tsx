@@ -229,7 +229,7 @@ useEffect(() => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/rooms",
+        "https://home-automation-platform-api.vercel.app/api/rooms",
         newRoom,
         {
           headers: {
