@@ -11,11 +11,13 @@ const passwordResetRoutes = require('./routes/passwordReset');
 const Room = require('./models/Room');
 const mqtt = require('mqtt');
 const app = express();
+
+
 app.use(cors({
-    origin: "https://home-automation-km5z5nsva-abderraouf-zouaouis-projects.vercel.app",
+    origin: "https://home-automation-phi.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization"]
+    allowedHeaders: ["Content-Type", "Authorization", "X-CSRF-Token", "X-Requested-With", "Accept", "Accept-Version", "Content-Length", "Content-MD5", "Date", "X-Api-Version"]
 }));
 app.use(bodyParser.json());
 
@@ -314,9 +316,14 @@ app.get('/get-latest-payloads', async (req, res) => {
     }
 });
 
+// Add the catch-all route HERE, before app.listen
+app.use('*', (req, res) => {
+    console.log(`Received request for: ${req.originalUrl}`);
+    res.status(404).json({ message: `Route ${req.originalUrl} not found` });
+});
 
 // Start server
 const PORT = 5000;
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${PORT}`);
 });
