@@ -11,19 +11,13 @@ const passwordResetRoutes = require('./routes/passwordReset');
 const Room = require('./models/Room');
 const mqtt = require('mqtt');
 const app = express();
-
-// Middleware
-app.use(cors());
+app.use(cors({
+    origin: "https://home-automation-phi.vercel.app",
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    credentials: true,
+    allowedHeaders: ["Content-Type", "Authorization"]
+}));
 app.use(bodyParser.json());
-
-// MongoDB Connection
-app.use(cors(
-    {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
-        methods: ["POST", "GET"],
-        credentials: true
-    }
-));
 
 mongoose
   .connect('mongodb://home_automation:project_web_2025@cluster0-shard-00-00.nslsr.mongodb.net:27017,cluster0-shard-00-01.nslsr.mongodb.net:27017,cluster0-shard-00-02.nslsr.mongodb.net:27017/smartHome?ssl=true&replicaSet=atlas-it0wjd-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0')
