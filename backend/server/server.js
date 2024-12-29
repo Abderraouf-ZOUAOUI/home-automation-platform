@@ -12,13 +12,13 @@ const Room = require('./models/Room');
 const mqtt = require('mqtt');
 const app = express();
 
-
 app.use(cors({
     origin: "https://home-automation-phi.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization", "X-CSRF-Token", "X-Requested-With", "Accept", "Accept-Version", "Content-Length", "Content-MD5", "Date", "X-Api-Version"]
 }));
+
 app.use(bodyParser.json());
 
 mongoose
