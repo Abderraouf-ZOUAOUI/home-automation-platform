@@ -315,8 +315,7 @@ app.get('/get-latest-payloads', async (req, res) => {
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
-
-// Add the catch-all route HERE, before app.listen
+// Catch-all route to handle undefined routes
 app.use('*', (req, res) => {
     console.log(`Received request for: ${req.originalUrl}`);
     res.status(404).json({ message: `Route ${req.originalUrl} not found` });
@@ -327,3 +326,4 @@ const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
+
