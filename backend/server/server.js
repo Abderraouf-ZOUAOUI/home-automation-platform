@@ -12,7 +12,7 @@ const Room = require('./models/Room');
 const mqtt = require('mqtt');
 const app = express();
 app.use(cors({
-    origin: "https://home-automation-phi.vercel.app",
+    origin: "https://home-automation-km5z5nsva-abderraouf-zouaouis-projects.vercel.app",
     methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     credentials: true,
     allowedHeaders: ["Content-Type", "Authorization"]
