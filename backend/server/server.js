@@ -11,13 +11,27 @@ const passwordResetRoutes = require('./routes/passwordReset');
 const Room = require('./models/Room');
 const mqtt = require('mqtt');
 const app = express();
+// CORS configuration
+const corsOptions = {
+  origin: 'https://home-automation-phi.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: [
+    'Content-Type',
+    'Authorization',
+    'X-CSRF-Token',
+    'X-Requested-With',
+    'Accept',
+    'Accept-Version',
+    'Content-Length',
+    'Content-MD5',
+    'Date',
+    'X-Api-Version'
+  ],
+  credentials: true
+};
 
-app.use(cors({
-    origin: "https://home-automation-phi.vercel.app",
-    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-    credentials: true,
-    allowedHeaders: ["Content-Type", "Authorization", "X-CSRF-Token", "X-Requested-With", "Accept", "Accept-Version", "Content-Length", "Content-MD5", "Date", "X-Api-Version"]
-}));
+// Apply CORS middleware
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
@@ -315,15 +329,15 @@ app.get('/get-latest-payloads', async (req, res) => {
         res.status(500).send('Erreur lors de la récupération des données');
     }
 });
+
 // Catch-all route to handle undefined routes
 app.use('*', (req, res) => {
-    console.log(`Received request for: ${req.originalUrl}`);
-    res.status(404).json({ message: `Route ${req.originalUrl} not found` });
+  console.log(`Received request for: ${req.originalUrl}`);
+  res.status(404).json({ message: `Route ${req.originalUrl} not found` });
 });
 
 // Start server
 const PORT = 5000;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
-
