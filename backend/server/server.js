@@ -34,6 +34,15 @@ app.use((req, res, next) => {
 });
 
 
+// Add additional headers middleware
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', '*');
+  res.header('Access-Control-Allow-Headers', '*');
+  next();
+});
+
+
 app.use(bodyParser.json());
 
 mongoose
