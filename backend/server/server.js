@@ -11,9 +11,9 @@ const passwordResetRoutes = require('./routes/passwordReset');
 const Room = require('./models/Room');
 const mqtt = require('mqtt');
 const app = express();
-// CORS configuration
+
 const corsOptions = {
-  origin: 'https://home-automation-phi.vercel.app',
+  origin: '*',
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: [
     'Content-Type',
@@ -27,7 +27,7 @@ const corsOptions = {
     'Date',
     'X-Api-Version'
   ],
-  credentials: true
+  credentials: false  // Set to false when using origin: '*'
 };
 
 // Apply CORS middleware
